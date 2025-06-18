@@ -1,0 +1,148 @@
+.body {
+  color: #000;
+  text-align: center;
+  letter-spacing: 0;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.section-background {
+  position: fixed;
+  inset: 0%;
+}
+
+.section-content {
+  filter: drop-shadow(0 0 15px #4d4d4d80);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0%;
+}
+
+.content-wrapper {
+  opacity: 0;
+}
+
+.header-404.margin-bottom-1 {
+  margin-bottom: 24px;
+}
+
+.header-404.margin-bottom-1.remove-margin-top {
+  margin-top: 0;
+}
+
+.text-1.margin-bottom-2 {
+  margin-bottom: 12px;
+}
+
+.text-3 {
+  font-family: IBM Plex Sans, sans-serif;
+}
+
+.code-embed {
+  display: none;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 12px;
+}
+
+.glass-layer {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: #fff3;
+  position: absolute;
+  inset: 0%;
+}
+
+.scrolling-wrapper {
+  position: absolute;
+  inset: 0%;
+  overflow: clip;
+}
+
+.scrolling-track {
+  grid-column-gap: 10vw;
+  grid-row-gap: 10vw;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.bg-text {
+  opacity: 0;
+  color: #4d4d4d;
+  mix-blend-mode: screen;
+  font-family: Orbitron, sans-serif;
+  font-size: 70vh;
+  font-weight: 700;
+  line-height: 100%;
+  position: relative;
+}
+
+.code-embed-2 {
+  display: none;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0%;
+}
+
+.code-embed-4, .code-embed-5 {
+  display: none;
+}
+
+.bg-text-shell {
+  position: relative;
+}
+
+.dark-frame {
+  position: relative;
+  inset: 0%;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 24px;
+}
+
+.code-embed-6, .code-embed-7 {
+  display: none;
+}
+
+.bg-clone-shell {
+  position: absolute;
+  inset: 0%;
+}
+
+.bg-text-clone {
+  opacity: 0;
+  color: #4d4d4d;
+  mix-blend-mode: screen;
+  font-family: Orbitron, sans-serif;
+  font-size: 70vh;
+  font-weight: 700;
+  line-height: 100%;
+  position: absolute;
+}
+
+.bg-text-clone.r {
+  color: red;
+}
+
+.bg-text-clone.g {
+  color: #0f0;
+}
+
+.bg-text-clone.b {
+  color: #00f;
+}
+
+
