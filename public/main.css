@@ -295,7 +295,7 @@
 @media (max-width: 600px) {
   .qr-code-row {
     gap: 5vw;
-    margin: 2em 0 1em 0;
+    margin: 2em 0 5em 0;
   }
   .qr-img {
     width: 88px;
