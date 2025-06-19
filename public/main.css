@@ -1,0 +1,307 @@
+.body {
+  color: #000;
+  text-align: center;
+  letter-spacing: 0;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.section-background {
+  position: fixed;
+  inset: 0%;
+}
+
+.section-content {
+  filter: drop-shadow(0 0 15px #4d4d4d80);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0%;
+}
+
+.content-wrapper {
+  opacity: 0;
+}
+
+.glass-layer {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: #fff3;
+  position: absolute;
+  inset: 0%;
+}
+
+.scrolling-wrapper {
+  position: absolute;
+  inset: 0%;
+  overflow: clip;
+}
+
+.scrolling-track {
+  grid-column-gap: 10vw;
+  grid-row-gap: 10vw;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.bg-text {
+  opacity: 0;
+  color: #4d4d4d;
+  mix-blend-mode: screen;
+  font-family: Orbitron, sans-serif;
+  font-size: 70vh;
+  font-weight: 700;
+  line-height: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0%;
+}
+
+.bg-text-shell {
+  position: relative;
+}
+
+.dark-frame {
+  position: relative;
+  inset: 0%;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 24px;
+}
+
+.bg-clone-shell {
+  position: absolute;
+  inset: 0%;
+}
+
+.bg-text-clone {
+  opacity: 0;
+  color: #4d4d4d;
+  mix-blend-mode: screen;
+  font-family: Orbitron, sans-serif;
+  font-size: 70vh;
+  font-weight: 700;
+  line-height: 100%;
+  position: absolute;
+}
+
+.bg-text-clone.r {
+  color: red;
+}
+
+.bg-text-clone.g {
+  color: #0f0;
+}
+
+.bg-text-clone.b {
+  color: #00f;
+}
+
+.grain-overlay {
+  pointer-events: none;
+  opacity: 0.15; /* ⚡️粒子透明度微降，更柔和 */
+}
+
+.grain-overlay canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  image-rendering: pixelated;
+  }
+
+.note-content {
+  font-family: "IBM Plex Sans", "Arial", sans-serif;
+  font-size: 1.07rem;
+  color: #ededed;
+  line-height: 1.63;
+  max-width: 960px;
+  margin: 10vh auto 0 auto;
+  padding: 0 min(5vw, 48px) 8vh min(5vw, 48px);
+  background: transparent;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .note-content {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .note-content {
+    max-width: 98vw;
+    padding: 0 3vw 6vh 3vw;
+    font-size: 0.97rem;
+    line-height: 1.58;
+  }
+}
+
+.note-body {
+  font-family: "IBM Plex Sans", "Arial", sans-serif;
+  font-size: 1.05em;      /* 避免桌面端太大 */
+  color: #ededed;
+  line-height: 1.63;
+  text-align: center;
+  text-shadow: none;
+}
+
+/* 分节标题样式（正文内副标题） */
+.note-body b,
+.note-section-title {
+  display: block;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.14em;
+  color: #fff;
+  margin: 2em 0 0.7em 0;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 2px #4d4d4d20;
+}
+
+.note-body p {
+  margin-top: 0;
+  margin-bottom: 1.08em;
+  line-height: 1.5;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #4d4d4d20;
+}
+
+.note-title {
+  font-family: "Orbitron", "IBM Plex Sans", "Arial", sans-serif;
+  font-size: clamp(2.6rem, 7vw, 4.5rem);      /* 响应式：移动端到桌面都够大 */
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #ededed;
+  text-align: center;
+  margin: 0 0 0.18em 0;
+  line-height: 1.12;
+  text-shadow:
+    0 4 4px #4d4d4d20;      /* 微亮高光，提升立体感 */
+}
+
+.note-subtitle {
+  font-family: "IBM Plex Sans", "Arial", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.75rem);
+  font-weight: 600;
+  color: #4d4d4d50;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 2.1em;
+  text-shadow: 0 2 2px #4d4d4d20;
+  text-transform: uppercase;  /* 保持副标题识别度，如果不要可去掉 */
+}
+
+
+.content-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  overflow: auto;
+  scrollbar-width: none;           /* Firefox */
+  -ms-overflow-style: none;        /* IE/Edge */
+}
+
+.content-wrapper::-webkit-scrollbar {
+  display: none;                   /* Chrome/Safari/Opera */
+}
+
+.content-wrapper::before, .content-wrapper::after {
+  content: "";
+  position: fixed;
+  left: 0; right: 0;
+  height: 30vh;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.content-wrapper::before {
+  top: 0;
+  background: linear-gradient(to bottom, #fff, transparent);
+}
+
+.content-wrapper::after {
+  bottom: 0;
+  background: linear-gradient(to top, #fff, transparent);
+}
+
+.bg-text,
+.bg-text-clone {
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.bg-text-clone {
+  opacity: 0;
+  transition: transform 0.05s ease, opacity 0.1s ease;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+.qr-code-row {
+  display: flex;
+  justify-content: center;
+  gap: 4vw; /* 两码间距 */
+  margin: 3em 0 5em 0; /* 上下留空 */
+}
+
+.qr-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+  max-width: 140px;
+}
+
+.qr-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  box-shadow: 0 8px 8px #4d4d4d20;
+  background: #fff;
+  object-fit: contain;
+}
+
+.qr-label {
+  margin-top: 0.75em;
+  font-size: 1em;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-family: "IBM Plex Sans", "Arial", sans-serif;
+  font-weight: 500;
+  text-shadow: 0 1px 1px #4d4d4d20;;
+}
+
+@media (max-width: 600px) {
+  .qr-code-row {
+    gap: 5vw;
+    margin: 2em 0 1em 0;
+  }
+  .qr-img {
+    width: 88px;
+    height: 88px;
+  }
+  .qr-label {
+    font-size: 0.97em;
+  }
+}
